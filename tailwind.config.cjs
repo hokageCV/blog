@@ -4,10 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        baseBG: "#2F3438 ",
+        baseBG: "#2F3438",
         baseText: "#a6adbb",
         baseTextDim: "#5c666d",
-        navBG: "#262a2d",
+        navBG: "#2F3438",
+        navBtn: "#262a2d",
+        navBtnBorder: "#1d2023",
       },
       fontFamily: {
         sans: ["Segoe Print", "Helvetica", "Arial", "sans-serif"],

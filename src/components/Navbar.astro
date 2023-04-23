@@ -1,13 +1,18 @@
 ---
+const btnClass =
+  "btn btn-sm bg-navBtn hover:btn-navBtn border border-2 border-navBtnBorder hover:border-baseText mr-1";
 ---
 
-<nav class="navbar bg-baseBG flex flex-col md:flex-row shadow shadow-lg">
+<nav class="navbar bg-navBG flex flex-col md:flex-row shadow shadow-lg">
   <div class="md:flex-1 md:mb-3 lg:mb-0">
     <p class="mx-0.5 px-0.5 normal-case text-2xl"><a href="/">Chaitanya Varu</a></p>
   </div>
   <div class="md:flex-none flex flex-row md:m-3 lg:m-0">
-    <button class="btn btn-sm btn-ghost border border-2 border-baseText">
+    <button class={btnClass}>
       <a href="/blogs">All Posts</a>
+    </button>
+    <button class={btnClass}>
+      <a href="/">Portfolio</a>
     </button>
   </div>
 </nav>
