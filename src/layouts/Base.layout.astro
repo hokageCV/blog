@@ -1,0 +1,16 @@
+---
+import BaseHeaderlayout from "./BaseHeader.layout.astro";
+const { title, description } = Astro.props;
+
+import Navbar from "../components/Navbar.astro";
+---
+
+<html lang="en" class="bg-baseBG font-sans">
+  <BaseHeaderlayout title={title} description={description} />
+  <body class="">
+    <Navbar />
+    <main class="p-5">
+      <slot />
+    </main>
+  </body>
+</html>

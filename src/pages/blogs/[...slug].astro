@@ -1,0 +1,28 @@
+---
+// Page for individual blog posts
+import { CollectionEntry } from "astro:content";
+import BlogPostlayout from "src/layouts/BlogPost.layout.astro";
+import { getAllPosts } from "src/utils/getAllPosts.astro";
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<BlogPostlayout {...post.data}>
+  <Content />
+  <div class="btn-group">
+    <button class="btn btn-active">Button</button>
+    <button class="btn">Button</button>
+    <button class="btn">Button</button>
+  </div>
+</BlogPostlayout>

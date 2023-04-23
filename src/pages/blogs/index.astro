@@ -1,0 +1,15 @@
+---
+// Page with a list of All blog posts
+
+import { getCollection } from "astro:content";
+import Card from "src/components/Card.astro";
+import Baselayout from "src/layouts/Base.layout.astro";
+
+const posts = await getCollection("blog");
+---
+
+<Baselayout>
+  <ul class="bg-red-500">
+    {posts.map((post) => <Card post={post} />)}
+  </ul>
+</Baselayout>

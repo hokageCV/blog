@@ -1,0 +1,18 @@
+---
+import { CollectionEntry } from "astro:content";
+import Baselayout from "./Base.layout.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, publishedDate, updatedDate } = Astro.props;
+---
+
+<Baselayout title={title} description={description}>
+  <article>
+    <h1 class="title">{title}</h1>
+    <small>{publishedDate}</small>
+    {updatedDate && <div class="last-updated-on">Last updated on {updatedDate}</div>}
+    <hr />
+    <slot />
+  </article>
+</Baselayout>

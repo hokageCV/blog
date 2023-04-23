@@ -1,0 +1,9 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getAllPosts() {
+  const allPosts = await getCollection("blog");
+
+  return allPosts;
+}
+---
