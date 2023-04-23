@@ -1,9 +1,14 @@
 ---
+import { dateToNumberedMonthDate } from "src/utils/date.utils";
 const { post } = Astro.props;
-const { title, date } = post.data;
+const { title, publishedDate } = post.data;
 ---
 
-<div class="bg-green-200 m-1 text-yellow-600">
-  <p><a href={`/blogs/${post.slug}/`}>{title}</a></p>
-  <small>{date}</small>
+<div class="m-2 p-1">
+  <div class="flex flex-row">
+    <p class="mr-6"><small>{dateToNumberedMonthDate(publishedDate)}</small></p>
+
+    <p class="text-left"><a href={`/blogs/${post.slug}/`}>{title}</a></p>
+  </div>
+  <hr class="mt-1 h-0.5 border-t-0 bg-baseTextDim opacity-20" />
 </div>

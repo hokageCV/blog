@@ -10,6 +10,12 @@ module.exports = {
         navBG: "#2F3438",
         navBtn: "#262a2d",
         navBtnBorder: "#1d2023",
+        night: {
+          4: "#2E3440",
+          3: "#3B4252",
+          2: "#434C5E",
+          1: "#4C566A",
+        },
       },
       fontFamily: {
         sans: ["Segoe Print", "Helvetica", "Arial", "sans-serif"],
