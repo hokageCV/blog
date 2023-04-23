@@ -12,7 +12,7 @@ export const collections = {
       updatedDate: z
         .string()
         .optional()
-        .transform((str) => (str ? new Date(str) : undefined)),
+        .transform((val) => (val ? new Date(val) : undefined)),
       draft: z.boolean().default(false),
       tags: z.array(z.string()),
     }),

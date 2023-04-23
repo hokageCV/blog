@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         baseBG: "#2F3438 ",
-        baseText: "#eceeef",
+        baseText: "#a6adbb",
+        baseTextDim: "#5c666d",
         navBG: "#262a2d",
       },
       fontFamily: {
@@ -14,5 +15,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };
