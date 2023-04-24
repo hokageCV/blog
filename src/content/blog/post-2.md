@@ -1,7 +1,7 @@
 ---
 title: Running out of sample post ideas
 slug: running-out-of-sample-post-ideas
-publishedDate: 2022-11-25
+publishedDate: 2024-11-25
 description: Sometimes you just run out of ideas for sample blog posts. It’s no one’s fault, it’s just the way it is.
 draft: false
 tags: ["General"]

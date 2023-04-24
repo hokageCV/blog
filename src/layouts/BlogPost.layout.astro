@@ -1,7 +1,7 @@
 ---
 import { CollectionEntry } from "astro:content";
 import Baselayout from "./Base.layout.astro";
-import { dateToFullMonthDate } from "src/utils/date.utils";
+import { dateToWordedMonthDate } from "src/utils/date.utils";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -13,10 +13,10 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
     <div class="mb-5">
       <h1 class="text-4xl text-center">{title}</h1>
 
-      <p class="text-sm text-baseTextDim mt-3">Published on {dateToFullMonthDate(publishedDate)}</p>
+      <p class="text-sm text-baseTextDim mt-3">Published on {dateToWordedMonthDate(publishedDate)}</p>
       {
         updatedDate && (
-          <p class="text-xs text-baseTextDim">Last updated on {dateToFullMonthDate(updatedDate)}</p>
+          <p class="text-xs text-baseTextDim">Last updated on {dateToWordedMonthDate(updatedDate)}</p>
         )
       }
     </div>

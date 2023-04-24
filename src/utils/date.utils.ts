@@ -1,15 +1,11 @@
-export const dateToFullMonthDate = (date: Date) => {
-  return date.toLocaleDateString("en-IN", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
+export const dateToWordedMonthDate = (date: Date) => {
+  return date.toLocaleString("en-IN", {
+    dateStyle: "medium",
   });
 };
 
 export const dateToNumberedMonthDate = (date: Date) => {
-  return date.toLocaleDateString("en-IN", {
-    day: "2-digit",
-    month: "numeric",
-    year: "numeric",
+  return date.toLocaleString("en-IN", {
+    dateStyle: "short",
   });
 };

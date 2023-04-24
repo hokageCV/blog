@@ -4,6 +4,11 @@ import { getCollection } from "astro:content";
 export async function getAllPosts() {
   const allPosts = await getCollection("blog");
 
-  return allPosts;
+  const sortedPosts = allPosts.sort(
+    (a, b) => Number(b.data.publishedDate) - Number(a.data.publishedDate)
+  );
+  console.log(sortedPosts);
+
+  return sortedPosts;
 }
 ---

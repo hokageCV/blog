@@ -1,8 +1,8 @@
 ---
-title: Beginning with CSS
+title: Beginning with CSS asdkfasdflkasd sdf sda lsadkf  aslf  asdf  sadfl asd asdf l fddsf
 slug: beginning-with-css
-publishedDate: 2022-12-03
-updatedDate: 2023-1-3
+publishedDate: 2025-12-03
+updatedDate: 2026-01-03
 description: CSS is a great way to style your website. In fact, there are no alternatives! Learn how to use it here.
 draft: false
 tags: ["CSS"]
