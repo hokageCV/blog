@@ -10,13 +10,17 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
 
 <Baselayout title={title} description={description}>
   <article class="flex flex-col items-center justify-center">
-    <div class="mb-5">
-      <h1 class="text-4xl text-center">{title}</h1>
+    <div class="mb-5 prose">
+      <h1 class="text-4xl text-center mb-2">{title}</h1>
 
-      <p class="text-sm text-baseTextDim mt-3">Published on {dateToWordedMonthDate(publishedDate)}</p>
+      <p class="text-sm text-baseTextDim my-0">
+        Published on {dateToWordedMonthDate(publishedDate)}
+      </p>
       {
         updatedDate && (
-          <p class="text-xs text-baseTextDim">Last updated on {dateToWordedMonthDate(updatedDate)}</p>
+          <p class="text-xs text-baseTextDim mt-0">
+            Last updated on {dateToWordedMonthDate(updatedDate)}
+          </p>
         )
       }
     </div>
