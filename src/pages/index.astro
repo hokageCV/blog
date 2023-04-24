@@ -1,10 +1,21 @@
 ---
 // page for the recent blog posts
+
+import { getRecentPosts } from "src/utils/getRecentPosts.astro";
 import Baselayout from "../layouts/Base.layout.astro";
+import Card from "src/components/Card.astro";
+
+const recentPosts = await getRecentPosts(5);
 ---
 
 <Baselayout>
-  <main class="flex flex-1 bg-red-800">
-    <h1 class="text-baseText">rasengan</h1>
+  <!-- <header class="flex flex-col items-center justify-center">
+    <p>write somethings here</p>
+  </header> -->
+  <main class="flex flex-col items-center justify-center">
+    <h1 class="text-3xl mb-5 text-baseText">Recent Posts</h1>
+    <div class="w-6/12">
+      {recentPosts.map((post) => <Card post={post} />)}
+    </div>
   </main>
 </Baselayout>

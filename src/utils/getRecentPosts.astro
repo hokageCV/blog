@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getRecentPosts(postsToReturn: number) {
+  const allPosts = await getCollection("blog");
+
+  // sort posts from latest to oldest
+  const sortedPosts = allPosts.sort(
+    (a, b) => Number(b.data.publishedDate) - Number(a.data.publishedDate)
+  );
+
+  // select the 'n' latest posts
+  const recentPosts = sortedPosts.slice(0, postsToReturn);
+
+  return recentPosts;
+}
+---
