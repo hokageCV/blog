@@ -14,7 +14,7 @@ const recentPosts = await getRecentPosts(5);
   </header> -->
   <main class="flex flex-col items-center justify-center">
     <h1 class="text-3xl mb-5 text-baseText">Recent Posts</h1>
-    <div class="w-6/12">
+    <div class="w-full md:w-6/12">
       {recentPosts.map((post) => <Card post={post} />)}
     </div>
   </main>
