@@ -19,7 +19,7 @@ We use `.then()` after the promise to tell javascript what needs to be done afte
 
 eg
 
-```
+```js
 fetch("https://dummyjson.com/carts?limit=5")
     .then(data => {
         console.log(data)
@@ -42,16 +42,17 @@ It tells javascript to wait for an asynchronous action to finish before continui
 
 eg
 
-```
+```js
 const getCurrentTabData = async () => {
-const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-const requiredData = { title: tabs[0].title, url: tabs[0].url };
-return requiredData;
+    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+    const requiredData = { title: tabs[0].title, url: tabs[0].url };
+    
+    return requiredData;
 };
 
 async function someFunction(){
-const data1 = getCurrentTabData() //❌ we won't get the expected value
-const data2 = await getCurrentTabData(); //✔ as we wait for promise to resolve, we get expected value
+    const data1 = getCurrentTabData() //❌ we won't get the expected value
+    const data2 = await getCurrentTabData(); //✔ as we wait for promise to resolve, we get expected value
 }
 ```
 
