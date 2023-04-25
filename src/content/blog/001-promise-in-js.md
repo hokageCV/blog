@@ -2,7 +2,7 @@
 title: Promise in Javascript
 slug: promise-in-js
 publishedDate: 2023-03-02
-description:
+description: explanation of promise in javascript in simple easy to understand words
 draft: false
 tags: ["promise", "javascript"]
 ---
