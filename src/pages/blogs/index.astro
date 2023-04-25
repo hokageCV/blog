@@ -3,16 +3,14 @@
 
 import Card from "src/components/Card.astro";
 import Baselayout from "src/layouts/Base.layout.astro";
+import BlogListlayout from "src/layouts/BlogList.layout.astro";
 import { getAllPosts } from "src/utils/getAllPosts.astro";
 
 const posts = await getAllPosts();
 ---
 
 <Baselayout>
-  <div class="flex flex-col items-center justify-center">
-    <h1 class="text-2xl mb-5">All Posts</h1>
-    <div class="w-full md:w-6/12">
-      {posts.map((post) => <Card post={post} />)}
-    </div>
-  </div>
+  <BlogListlayout heading="All Posts">
+    {posts.map((post) => <Card post={post} />)}
+  </BlogListlayout>
 </Baselayout>

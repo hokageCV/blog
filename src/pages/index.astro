@@ -4,6 +4,7 @@
 import { getRecentPosts } from "src/utils/getRecentPosts.astro";
 import Baselayout from "../layouts/Base.layout.astro";
 import Card from "src/components/Card.astro";
+import BlogListlayout from "src/layouts/BlogList.layout.astro";
 
 const recentPosts = await getRecentPosts(5);
 ---
@@ -12,10 +13,8 @@ const recentPosts = await getRecentPosts(5);
   <!-- <header class="flex flex-col items-center justify-center">
     <p>write somethings here</p>
   </header> -->
-  <main class="flex flex-col items-center justify-center">
-    <h1 class="text-3xl mb-5 text-baseText">Recent Posts</h1>
-    <div class="w-full md:w-6/12">
-      {recentPosts.map((post) => <Card post={post} />)}
-    </div>
-  </main>
+
+  <BlogListlayout heading="Recent Posts">
+    {recentPosts.map((post) => <Card post={post} />)}
+  </BlogListlayout>
 </Baselayout>
