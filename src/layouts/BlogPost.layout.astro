@@ -9,7 +9,7 @@ const { title, description, publishedDate, updatedDate } = Astro.props;
 ---
 
 <Baselayout title={title} description={description}>
-  <article class="flex flex-col items-center justify-center">
+  <article class="flex flex-col items-center justify-center w-fit md:w-full">
     <div class="mb-5 prose">
       <h1 class="text-4xl text-center mb-2">{title}</h1>
 
