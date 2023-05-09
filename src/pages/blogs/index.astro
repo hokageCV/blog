@@ -1,7 +1,7 @@
 ---
 // Page with a list of All blog posts
 
-import Card from "src/components/Card.astro";
+import DateCard from "src/components/DateCard.astro";
 import Baselayout from "src/layouts/Base.layout.astro";
 import BlogListlayout from "src/layouts/BlogList.layout.astro";
 import { getAllPosts } from "src/utils/getAllPosts.astro";
@@ -11,6 +11,6 @@ const posts = await getAllPosts();
 
 <Baselayout>
   <BlogListlayout heading="All Posts">
-    {posts.map((post) => <Card post={post} />)}
+    {posts.map((post) => <DateCard post={post} />)}
   </BlogListlayout>
 </Baselayout>

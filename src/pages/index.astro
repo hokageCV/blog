@@ -3,7 +3,7 @@
 
 import { getRecentPosts } from "src/utils/getRecentPosts.astro";
 import Baselayout from "../layouts/Base.layout.astro";
-import Card from "src/components/Card.astro";
+import DateCard from "src/components/DateCard.astro";
 import BlogListlayout from "src/layouts/BlogList.layout.astro";
 
 const recentPosts = await getRecentPosts(3);
@@ -15,6 +15,6 @@ const recentPosts = await getRecentPosts(3);
   </header> -->
 
   <BlogListlayout heading="Recent Posts">
-    {recentPosts.map((post) => <Card post={post} />)}
+    {recentPosts.map((post) => <DateCard post={post} />)}
   </BlogListlayout>
 </Baselayout>
