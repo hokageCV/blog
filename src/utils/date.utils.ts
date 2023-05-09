@@ -1,7 +1,10 @@
 export const dateToWordedMonthDate = (date: Date) => {
-  return date.toLocaleString("en-IN", {
+  const dateInString = date.toLocaleString("en-IN", {
     dateStyle: "medium",
   });
+  const formatedDate = dateInString.replace(/-/g, " ");
+
+  return formatedDate;
 };
 
 export const dateToNumberedMonthDate = (date: Date) => {
