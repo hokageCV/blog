@@ -15,6 +15,12 @@ Progressive Web Apps (PWA) is a way by which we can run our websites outside of 
 
 PWAs have fast load times, work offline, and can be accessed from anywhere without the need for a specific app store
 
+### Some examples of PWA
+
+- [Squoosh](https://squoosh.app)
+- [Pinterest](https://www.pinterest.com)
+- [Spotify](https://open.spotify.com)
+
 ### Main parts of a PWA
 
 There are 3 main parts of a PWA:
@@ -34,19 +40,10 @@ In the HTML file, add following tags in the head section
 <!-- we can change this theme color using JS, but not the one in manifest file  -->
 <meta name="theme-color" content="#ed6606" />
 
-<link rel="stylesheet" href="./style.css" />
 <link rel="manifest" href="./app.webmanifest" />
 <link rel="apple-touch-icon" href="./assets/icons/icon_512.png" />
 
 <script src="./sw-registerer.js"></script>
-```
-
-We are using a serviceworker registerer file because if we directly add the serviceworker to the HTML file then it wil be in the same thread and not a separate thread.
-
-```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./serviceworker.js");
-}
 ```
 
 ### Manifest File
@@ -77,9 +74,21 @@ In native app, we download all resources together as a package, and it works off
 
 In PWA, we download HTML. HTML then registers a service worker. service worker installs some resources & browser installs other resources on demand. Now this works offline since service worker has installed the required resources to run app.
 
+Service worker caches the required resources which can be used to serve even when there is no internet connection.
+
 It is installed by the web page and doesn't require user permission to be installed.
 
-Service worker caches the required resources which can be used to serve even when there is no internet connection.
+#### Registering a service worker
+
+In the head section of the HTML file, add `<script src="./sw-registerer.js"></script>`
+
+We are using a serviceworker registerer file because if we directly add the serviceworker to the HTML file then it wil be in the same thread and not a separate thread.
+
+```js
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./serviceworker.js");
+}
+```
 
 ### Useful resources for making PWA
 
