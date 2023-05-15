@@ -9,9 +9,10 @@ tags: ["git"]
 
 ### What is an SSH key
 
-Secure Shell (SSH) keys are mainly used to access systems remotely, without the need for a password.
+Secure Socket Shell (SSH) keys are mainly used to access systems remotely, without the need for a password.
 
-SSH keys are generated in pairs, public & private key. The private key is kept on the local system and the public key is uploaded to the remote system.  
+SSH keys are generated in pairs, public & private key. The private key is kept on the local system and the public key is uploaded to the remote system.
+
 When accessing the remote system, it will use the public key to encrypt a message that can only be decrypted by the private key. If the local system decrypts the message successfully, the remote system will grant access.
 
 ### Generating SSH key
