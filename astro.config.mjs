@@ -7,6 +7,4 @@ export default defineConfig({
   integrations: [tailwind()],
 
   site: 'https://hokageCV.github.io',
-  base: '/blog',
-
 });
