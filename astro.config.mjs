@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
 
-  site: 'https://hokageCV.github.io',
+  site: 'https://hokagecv.github.io',
 });
