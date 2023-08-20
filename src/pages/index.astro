@@ -1,20 +1,21 @@
 ---
 // page for the recent blog posts
 
-import { getRecentPosts } from "src/utils/getRecentPosts.astro";
-import Baselayout from "../layouts/Base.layout.astro";
-import DateCard from "src/components/DateCard.astro";
-import BlogListlayout from "src/layouts/BlogList.layout.astro";
+import DateCard from 'src/components/DateCard.astro';
+import BlogListlayout from 'src/layouts/BlogList.layout.astro';
+import { getRecentPosts } from 'src/utils/getRecentPosts.astro';
+import Baselayout from '../layouts/Base.layout.astro';
 
-const recentPosts = await getRecentPosts(3);
+const recentPosts = await getRecentPosts(5);
 ---
 
 <Baselayout>
-  <!-- <header class="flex flex-col items-center justify-center">
-    <p>write somethings here</p>
-  </header> -->
+    <header class='flex flex-col items-center justify-start mb-16'>
+        <p class='text-3xl'>Welcome to My Blog!</p>
+        <p>Here, I'll be sharing my learnings as I explore the world of coding.</p>
+    </header>
 
-  <BlogListlayout heading="Recent Posts">
-    {recentPosts.map((post) => <DateCard post={post} />)}
-  </BlogListlayout>
+    <BlogListlayout heading='Recent Posts'>
+        {recentPosts.map((post) => <DateCard post={post} />)}
+    </BlogListlayout>
 </Baselayout>
