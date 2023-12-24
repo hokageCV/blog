@@ -1,10 +1,10 @@
 ---
-title: Trying Vim Motions
-slug: trying-vim-motions
+title: Learning Vim Motions
+slug: learning-vim-motions
 publishedDate: 2023-12-10
-description: Learn vim motions
+description: My journey of learning vim motions
 draft: false
-tags: []
+tags: ['vim']
 ---
 
 ## Why vim motions ?
@@ -38,7 +38,7 @@ To increase the chances of using vim motions, I enabled them in both VS Code and
 
 For the first few weeks, I enabled vim mode only during weekends, so I don't get slowed down in my day work. One I got comfortable with vim motions, I started using vim mode full time on both apps.
 
-I already used lot of keybindings instead of using mouse in my vscode so adding new commands to memory was not a challenge. Though getting habituated to using those commands instead of arrow keys took some time.  
+I already used lot of keybindings instead of using mouse in my vscode so adding new commands to memory was not a challenge. Though getting habituated to using those commands instead of arrow keys took some time.
 Also remapping caps lock key to escape key was helpful.
 
 ## Two weeks into vim motions
