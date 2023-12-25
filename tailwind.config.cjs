@@ -4,23 +4,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        baseBG: "#2F3438",
-        baseText: "#a6adbb",
+        baseBG: "#212529",
+        baseText: "#e9ecee",
         baseTextDim: "#5c666d",
-        navBG: "#2F3438",
-        navBtn: "#262a2d",
-        navBtnBorder: "#1d2023",
-        night: {
-          4: "#2E3440",
-          3: "#3B4252",
-          2: "#434C5E",
-          1: "#4C566A",
-        },
+        navBG: "#212529",
+        navBtn: "#242526",
+        navBtnBorder: "#181b1e",
       },
       fontFamily: {
         sans: ["Segoe Print", "Helvetica", "Arial", "sans-serif"],
         cursive: ["Bradley Hand", "Chilanka", "TSCu_Comic", "cursive"],
       },
+      // typography: (theme) => ({
+      //   DEFAULT: {
+      //     css: {
+      //       a: {
+      //         color: "#68c6fa",
+      //       }
+      //     }
+      //   }
+      // }),
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
